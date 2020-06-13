@@ -1,2 +1,2 @@
-# rust-eular
-Project eular solved by Rust
+# rust-euler
+Project euler solved by Rust
