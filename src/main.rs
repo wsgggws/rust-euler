@@ -10,6 +10,7 @@ pub mod p0010_summation_of_primes;
 pub mod p0012_highly_divisible_triangular_number;
 pub mod p0015_lattice_paths;
 pub mod p0016_power_digit_sum;
+pub mod p0020_factorial_digit_sum;
 
 fn main() {
     println!("Hello, rust and euler");
