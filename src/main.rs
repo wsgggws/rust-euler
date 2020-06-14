@@ -7,7 +7,9 @@ pub mod p0007_10001st_prime;
 pub mod p0008_largest_product_in_a_series;
 pub mod p0009_special_pythagorean_triplet;
 pub mod p0010_summation_of_primes;
+pub mod p0012_highly_divisible_triangular_number;
+pub mod p0015_lattice_paths;
 
 fn main() {
-    println!("Hello, rust and eular");
+    println!("Hello, rust and euler");
 }
