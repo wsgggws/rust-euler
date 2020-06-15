@@ -16,7 +16,7 @@ impl Solution {
         }
         let mut result = 1u64;
         for (key, value) in prime_divicotors.iter() {
-            for _ in 0..(*value) {
+            for _ in 0..*value {
                 result *= key;
             }
         }
@@ -26,16 +26,16 @@ impl Solution {
     fn get_prime_divicotors(number: u64, prime_divicotors: &mut HashMap<u64, u32>) {
         let primes: [u64; 8] = [2, 3, 5, 7, 11, 13, 17, 19];
         let mut number = number;
-        for prime in &primes {
-            if number % (*prime) == 0 {
+        for &prime in primes.iter() {
+            if number % prime == 0 {
                 let mut count_prime = 0u32;
-                while number % *prime == 0 {
-                    number = number / *prime;
+                while number % prime == 0 {
+                    number = number / prime;
                     count_prime += 1u32;
                 }
-                let value = prime_divicotors.get(prime).unwrap_or(&0);
+                let value = prime_divicotors.get(&prime).unwrap_or(&0);
                 if count_prime > *value {
-                    prime_divicotors.insert(*prime, count_prime);
+                    prime_divicotors.insert(prime, count_prime);
                 }
             }
         }
