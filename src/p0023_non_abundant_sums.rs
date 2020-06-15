@@ -14,7 +14,6 @@ pub struct Solution {}
 impl Solution {
     pub fn non_abundant_sums() -> u32 {
         let abundants: Vec<u32> = Solution::get_abundants();
-        println!("abundants: {:?}", abundants);
         let mut two_abundants_sums: HashSet<u32> = HashSet::new();
         let lens = abundants.len();
         for i in 0..lens {
