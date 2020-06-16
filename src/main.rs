@@ -9,6 +9,7 @@ pub mod p0008_largest_product_in_a_series;
 pub mod p0009_special_pythagorean_triplet;
 pub mod p0010_summation_of_primes;
 pub mod p0011_largest_product_in_a_grid;
+pub mod p0012_highly_divisible_triangular_number;
 pub mod p0013_large_sum;
 pub mod p0015_lattice_paths;
 pub mod p0016_power_digit_sum;
