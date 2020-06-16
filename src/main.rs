@@ -11,6 +11,7 @@ pub mod p0010_summation_of_primes;
 pub mod p0011_largest_product_in_a_grid;
 pub mod p0012_highly_divisible_triangular_number;
 pub mod p0013_large_sum;
+pub mod p0014_longest_collatz_sequence;
 pub mod p0015_lattice_paths;
 pub mod p0016_power_digit_sum;
 pub mod p0018_maximum_path_sum_i;
