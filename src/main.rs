@@ -7,7 +7,7 @@ pub mod p0005_smallest_multiple;
 pub mod p0006_sum_square_difference;
 pub mod p0008_largest_product_in_a_series;
 pub mod p0017_number_letter_counts;
-// 22
+pub mod p0022_names_scores;
 
 // 序列
 pub mod p0014_longest_collatz_sequence;
