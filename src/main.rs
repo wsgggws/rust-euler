@@ -49,7 +49,7 @@ pub mod p0024_lexicographic_permutations;
 // 31, 41, 49, 43
 
 // 日期
-// 19
+pub mod p0019_counting_sundays;
 
 // 分数
 // 26, 33
