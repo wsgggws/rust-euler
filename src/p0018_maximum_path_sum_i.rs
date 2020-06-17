@@ -47,7 +47,10 @@ impl Solution {
                 }
             }
         }
-        result[grid.len() - 1].iter().map(|&a| a).max().unwrap()
+        result[grid.len() - 1].iter()
+            .map(|&a| a)
+            .max()
+            .unwrap()
     }
 }
 

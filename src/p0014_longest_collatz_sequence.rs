@@ -22,7 +22,6 @@ impl Solution {
         let mut result = 1;
         for num in 1..n {
             let c = Solution::collatz_len(num);
-            // println!("c: {}", c);
             if c > maxs {
                 maxs = c;
                 result = num;
@@ -49,6 +48,5 @@ mod tests {
     fn longest_collatz_sequence_test() {
         assert_eq!(Solution::longest_collatz_sequence(13), 9);
         assert_eq!(Solution::longest_collatz_sequence(1000000), 837799);
-        // assert_eq!(Solution::longest_collatz_sequence(5000000), 3732423);
     }
 }

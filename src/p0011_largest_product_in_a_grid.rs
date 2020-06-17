@@ -71,7 +71,10 @@ impl Solution {
                 }
             }
         }
-        groups.iter().map(|&(a, b, c, d)| a*b*c*d).max().unwrap()
+        groups.iter()
+            .map(|&(a, b, c, d)| a*b*c*d)
+            .max()
+            .unwrap()
     }
 }
 

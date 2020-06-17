@@ -23,7 +23,9 @@ impl Solution {
         });
         // TODO 这里必须要进行排序，原因还需要看源代码
         permutations.sort();
-        permutations[n-1].iter().map(|&num| char::from_digit(num, 10).unwrap()).collect()
+        permutations[n-1].iter()
+            .map(|&num| char::from_digit(num, 10).unwrap())
+            .collect()
     }
 }
 

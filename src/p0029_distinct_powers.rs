@@ -20,13 +20,14 @@ impl Solution {
         let mut collections: HashSet<Vec<_>> = HashSet::new();
         // 得到100以内的质数
         let primes = Solution::get_primes(100);
-        println!("primes: {:?}", primes);
         for a in start..=end {
             let prime_divictors = Solution::get_prime_divictors(a, &primes);
-            println!("prime_divictors: {:?}", prime_divictors);
             for b in start..=end {
-                let changed_prime_divictors = prime_divictors.clone().iter().map(|&(x, y)| (x, y*b)).collect();
-                println!("changed_prime_divictors: {:?}", changed_prime_divictors);
+                let changed_prime_divictors = prime_divictors
+                    .clone()
+                    .iter()
+                    .map(|&(x, y)| (x, y * b))
+                    .collect();
                 collections.insert(changed_prime_divictors);
             }
         }
@@ -34,14 +35,17 @@ impl Solution {
     }
 
     fn get_primes(number: u32) -> Vec<u32> {
-        (2..number).filter(|&num| Solution::is_prime(num)).collect::<Vec<u32>>()
+        (2..number)
+            .filter(|&num| Solution::is_prime(num))
+            .collect::<Vec<u32>>()
     }
 
     fn is_prime(num: u32) -> bool {
         if num == 2 || num == 3 {
             return true;
         }
-        !(2..=(num as f64).sqrt().ceil() as u32).any(|value| num % value == 0)
+        !(2..=(num as f64).sqrt().ceil() as u32)
+            .any(|value| num % value == 0)
     }
 
     fn get_prime_divictors(number: u32, primes: &Vec<u32>) -> Vec<(u32, u32)> {
@@ -62,7 +66,6 @@ impl Solution {
         prime_divictors
     }
 }
-
 
 #[cfg(test)]
 mod tests {

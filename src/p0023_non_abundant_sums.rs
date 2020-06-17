@@ -23,15 +23,22 @@ impl Solution {
                 }
             }
         }
-        (1..28123).filter(|num| two_abundants_sums.get(num).is_none()).sum::<u32>()
+        (1..28123)
+            .filter(|num| two_abundants_sums.get(num).is_none())
+            .sum::<u32>()
     }
 
     fn get_abundants() -> Vec<u32> {
-        (12..28123).filter(|&num| Solution::is_abundant(num)).collect::<Vec<u32>>()
+        (12..28123)
+            .filter(|&num| Solution::is_abundant(num))
+            .collect::<Vec<u32>>()
     }
 
     fn is_abundant(number: u32) -> bool {
-        (1..=number/2).filter(|&num| number % num == 0).sum::<u32>() > number
+        (1..=number/2)
+            .filter(|&num| number % num == 0)
+            .sum::<u32>()
+            .gt(&number)
     }
 }
 

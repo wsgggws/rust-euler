@@ -50,7 +50,9 @@ impl Fib {
         if carry > 0 {
             result.push_str(&carry.to_string());
         }
-        result.chars().rev().collect()
+        result.chars()
+            .rev()
+            .collect()
     }
 }
 

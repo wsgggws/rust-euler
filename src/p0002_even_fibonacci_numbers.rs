@@ -9,26 +9,31 @@
 pub struct Solution {}
 
 struct Fib {
-    x: (u64, u64),
+    // pre, current
+    fib: (u64, u64),
 }
 
 impl Fib {
     fn new() -> Fib {
-        Fib { x: (1, 1) }
+        Fib { fib: (0, 1) }
     }
 }
 
 impl Iterator for Fib {
     type Item = u64;
     fn next(&mut self) -> Option<Self::Item> {
-        self.x = (self.x.1, self.x.0 + self.x.1);
-        Some(self.x.0)
+        // pre, current = current, current + pre
+        self.fib = (self.fib.1, self.fib.0 + self.fib.1);
+        Some(self.fib.1)
     }
 }
 
 impl Solution {
     pub fn even_fibonacci_numbers(num: u64) -> u64 {
-        Fib::new().take_while(|&a| a<=num).filter(|&a| a % 2 == 0).sum::<u64>()
+        Fib::new()
+            .take_while(|&a| a<=num)
+            .filter(|&a| a % 2 == 0)
+            .sum::<u64>()
     }
 }
 

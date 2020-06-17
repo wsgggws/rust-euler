@@ -18,15 +18,16 @@
 // What is the value of the first triangle number to have over five hundred divisors?
 
 struct TriangleNumber {
-    sum: u64,
-    next_num: u64,
+    // index = 1, return 1*2/2 = 1
+    // ...
+    // index = n, return n*(n+1)/2
+    index: u64,
 }
 
 impl TriangleNumber {
     fn new() -> Self {
         Self {
-            sum: 0,
-            next_num: 1,
+            index: 0,
         }
     }
 }
@@ -34,9 +35,12 @@ impl TriangleNumber {
 impl Iterator for TriangleNumber {
     type Item = u64;
     fn next(&mut self) -> Option<Self::Item> {
-        self.sum = self.sum + self.next_num;
-        self.next_num = self.next_num + 1;
-        Some(self.sum)
+        self.index = self.index + 1;
+        if self.index % 2 == 0 {
+            Some(self.index / 2 * (self.index + 1))
+        } else {
+            Some((self.index + 1) / 2 * self.index)
+        }
     }
 }
 
@@ -59,6 +63,10 @@ impl Solution {
         (1..(num as f64).sqrt().ceil() as u64)
             .filter(|&x| num % x == 0)
             .count() * 2 >= divisors_nums
+            // TODO 可以写成如下方式的，但还不知道如何以函数式的将usize => u64
+            // .count()
+            // .mul(&2)
+            // .ge(&divisors_nums)
     }
 }
 

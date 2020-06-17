@@ -15,8 +15,9 @@ impl Solution {
         for digit in 2..=n {
             result = Solution::mul_number_for_string(&result, digit);
         }
-        println!("result: {}", result);
-        result.chars().map(|num| num.to_digit(10).unwrap()).sum::<u32>()
+        result.chars()
+            .map(|num| num.to_digit(10).unwrap())
+            .sum::<u32>()
     }
 
     fn mul_number_for_string(strs: &String, digit: u32) -> String {

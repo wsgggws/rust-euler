@@ -27,7 +27,9 @@ impl Solution {
         for _ in 0..n {
             result = Solution::mul_2_for_string(&result);
         }
-        result.chars().map(|num| num.to_digit(10).unwrap()).sum::<u32>()
+        result.chars()
+            .map(|num| num.to_digit(10).unwrap())
+            .sum::<u32>()
     }
 
     fn mul_2_for_string(number: &String) -> String {
@@ -40,7 +42,9 @@ impl Solution {
         if carry > 0 {
             result.push_str(&carry.to_string());
         }
-        result.chars().rev().collect()
+        result.chars()
+            .rev()
+            .collect()
     }
 }
 

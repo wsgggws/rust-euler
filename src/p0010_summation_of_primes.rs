@@ -8,14 +8,18 @@ pub struct Solution {}
 
 impl Solution {
     pub fn summation_of_primes(max_value: u64) -> u64 {
-        (2u64..).filter(|&num| Solution::is_prime(num)).take_while(|&num| num < max_value).sum::<u64>()
+        (2u64..)
+            .filter(|&num| Solution::is_prime(num))
+            .take_while(|&num| num < max_value)
+            .sum::<u64>()
     }
 
     fn is_prime(num: u64) -> bool {
         if num == 2 || num == 3 {
             return true;
         }
-        !(2..=(num as f64).sqrt().ceil() as u64).any(|value| num % value == 0)
+        !(2..=(num as f64).sqrt().ceil() as u64)
+            .any(|value| num % value == 0)
     }
 }
 

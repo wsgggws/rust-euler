@@ -214,7 +214,6 @@ impl Solution {
         let mut result = String::from(&strs[0]);
         for i in 1..strs.len() {
             result = Solution::add_strings(&result, &strs[i]);
-            println!("result: {:?}", result);
         }
         // 注意题目要求只要前10位
         String::from(&result[..10])
@@ -238,7 +237,9 @@ impl Solution {
         if carry > 0 {
             result.push_str(&carry.to_string());
         }
-        result.chars().rev().collect()
+        result.chars()
+            .rev()
+            .collect()
     }
 }
 

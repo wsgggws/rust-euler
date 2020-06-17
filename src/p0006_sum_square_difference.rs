@@ -16,7 +16,7 @@ pub struct Solution {}
 
 impl Solution {
     pub fn sum_square_difference() -> u64 {
-        (1..=100u64).sum::<u64>() * (1..=100u64).sum::<u64>() - (1..=100u64).map(|num| num * num).sum::<u64>()
+        (1..=100u64).sum::<u64>().pow(2) - (1..=100u64).map(|num| num * num).sum::<u64>()
     }
 
 }
