@@ -52,7 +52,8 @@ pub mod p0024_lexicographic_permutations;
 pub mod p0019_counting_sundays;
 
 // 分数
-// 26, 33
+pub mod p0026_reciprocal_cycles;
+// 33
 
 // 三角形数
 // 39, 42, 44, 45
