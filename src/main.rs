@@ -16,6 +16,7 @@ pub mod p0036_double_base_palindromes;
 pub mod p0037_truncatable_primes;
 pub mod p0038_pandigital_multiples;
 pub mod p0039_integer_right_triangles;
+pub mod p0040_champernownes_constant;
 
 // 序列
 pub mod p0014_longest_collatz_sequence;
