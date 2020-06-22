@@ -10,6 +10,12 @@ pub mod p0017_number_letter_counts;
 pub mod p0022_names_scores;
 pub mod p0032_pandigital_products;
 pub mod p0033_digit_cancelling_fractions;
+pub mod p0034_digit_factorials;
+pub mod p0035_circular_primes;
+pub mod p0036_double_base_palindromes;
+pub mod p0037_truncatable_primes;
+pub mod p0038_pandigital_multiples;
+pub mod p0039_integer_right_triangles;
 
 // 序列
 pub mod p0014_longest_collatz_sequence;
