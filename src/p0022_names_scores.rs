@@ -11,7 +11,8 @@ pub struct Solution {}
 use std::fs;
 impl Solution {
     pub fn get_names_scores() -> u64 {
-        let data_str = Solution::get_data_from_file();
+        let data_str = fs::read_to_string("data/p0022_names.txt")
+            .expect("read file p022_names.txt raise a error");
         let data = Solution::remove_quote_and_line_breaked(&data_str);
         let mut names: Vec<&str> = data.split(",").collect();
         names.sort();
@@ -20,12 +21,6 @@ impl Solution {
             .enumerate()
             .map(|(index, name)| (index + 1) as u64 * Solution::get_word_score(name))
             .sum::<u64>()
-    }
-
-    fn get_data_from_file() -> String {
-        let data = fs::read_to_string("data/p0022_names.txt")
-            .expect("read file p022_names.txt raise a error");
-        data
     }
 
     fn remove_quote_and_line_breaked(data: &str) -> String {
