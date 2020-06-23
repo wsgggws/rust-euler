@@ -19,6 +19,7 @@ pub mod p0039_integer_right_triangles;
 pub mod p0040_champernownes_constant;
 pub mod p0041_pandigital_prime;
 pub mod p0042_coded_triangle_numbers;
+pub mod p0043_sub_string_divisibility;
 
 // 序列
 pub mod p0014_longest_collatz_sequence;
